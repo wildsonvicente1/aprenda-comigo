@@ -1,0 +1,486 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+/* Estilização Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 36px;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.subtitulo {
+  font-size: 32px;
+  text-align: center;
+  color: #4caf50;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.paragrafo {
+  color: #333;
+  font-size: 16px;
+  text-align: justify;
+  padding: 30px;
+}
+
+/* Ajuste da imagem no canto superior esquerdo */
+.logomarca img {
+  width: auto;
+  height: 200px; /* Tamanho ajustável entre 50px e 150px */
+  float: left; /* Alinhamento à esquerda */
+  margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Estilização do Cabeçalho */
+header {
+  background-color: #2193f3;
+  color: #fff;
+  max-width: 100%;
+/*  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; */
+}
+
+/* Estilização do Menu Desktop */
+.menu-desktop ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  margin-top: 15px;
+}
+
+.menu-desktop ul li {
+  font-size: 16px;
+  margin: 10px;
+  font-weight: 900;
+}
+
+.menu-desktop ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-desktop ul li a:hover {
+  color: #ff5722;
+  text-shadow: 0 3px 8px #fff;
+  font-size: 20px; /* Aumenta o tamanho da fonte */
+  transform: scale(0.3), font-size 0.3s ease; /* Aumenta o tamanho da fonte */
+  transition: transform 0.3s ease, color 0.3s ease; /* Adiciona a transição suave */
+}
+
+/* Ícone de abrir menu no topo direito */
+.btn-abrir-menu {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 2px;
+  cursor: pointer;
+}
+
+/* Estilização do menu mobile */
+.menu-mobile {
+  display: none; /* O menu fica oculto até ser ativado */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+ /* height: 100%; */
+  background-color: #2196f3;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Botão de fechar menu */
+.btn-fechar {
+  text-align: right;
+  font-size: 30px;
+  color: #ffd;
+  cursor: pointer;
+}
+
+/* Menu mobile links */
+.menu-mobile nav ul {
+  padding: 0;
+  list-style: none;
+  margin-top: 50px;
+}
+
+.menu-mobile nav ul li {
+  margin-bottom: 20px;
+}
+
+.menu-mobile nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.menu-mobile nav ul li a:hover {
+  color: #ff5722;
+  text-shadow: 0 3px 8px #fff;
+  font-size: 20px; /* Aumenta o tamanho da fonte */
+  transform: scale(0.3), font-size 0.3s ease; /* Aumenta o tamanho da fonte */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Estilização Pagina Início */
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 500px;
+}
+
+.inicio button {
+  background-color: #ff5722;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 60px;
+  border: none;
+}
+
+.inicio button:hover {
+  background-color: #ffeb3b;
+  border: 1px solid #ff5722;
+  color: #ff5722;
+}
+
+/* Efeito de clique (levemente apertado) */
+.inicio button:active {
+  transform: scale(0.95); /* Leve efeito de clique */
+}
+
+/* Estilização Formulário de Contato */
+.contato {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+}
+
+.contato .container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contato form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  color: #333;
+}
+
+/* Alterar cor do background e borda ao digitar (focus) */
+.contato form input:focus,
+.contato form textarea:focus {
+  background-color: #e7f3e7; /* Cor de fundo mais clara ao focar */
+  border-color: #ff5722; /* Borda com nova cor ao focar */
+  outline: none; /* Remove o outline padrão */
+}
+
+/* Estilização do textarea */
+.contato form textarea {
+  width: 100%;
+  height: 150px; /* Altura fixa */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  resize: none; /* Desabilita a opção de redimensionar o textarea */
+}
+
+.contato .btn-enviar input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Transição para a cor e transformação ao clicar */
+}
+
+.contato .btn-enviar input[type="submit"]:hover {
+  background-color: #ff5722;
+}
+
+/* Efeito de clique (levemente apertado) */
+.contato .btn-enviar input[type="submit"]:active {
+  transform: scale(0.95); /* Leve efeito de clique */
+}
+
+/* Estilização do Rodapé */
+.rodape {
+  background-color: #2196f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rodape p {
+  color: #fff;
+  text-align: center;
+}
+
+.btn-icons {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.btn-icons button {
+  font-size: 22px;
+  background-color: #fff;
+  color: #2196f3;
+  border: 2px solid #2196f3;
+  box-shadow: 0 3px 5px 3px #ffffff60;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn-icons button:hover {
+  background-color: #ffeb3b;
+  color: #ff5732;
+  border: 2px solid #ff5732;
+}
+
+/* Estilização da Página de Cadastro */
+.cadastro {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+}
+
+.cadastro .container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cadastro form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  color: #333;
+}
+
+/* Alterar cor do background e borda ao digitar (focus) */
+.cadastro form input:focus {
+  background-color: #e7f3e7;
+  border-color: #ff5722;
+  outline: none;
+}
+
+/* Botão de cadastro com mesma estilização do botão da classe .inicio */
+.cadastro button {
+  background-color: #ff5722;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Efeito ao passar o mouse (hover) no botão de cadastro */
+.cadastro button:hover {
+  background-color: #ffeb3b;
+  border: 1px solid #ff5722;
+  color: #ff5722;
+}
+
+/* Efeito de clique (levemente apertado) */
+.cadastro button:active {
+  transform: scale(0.95);
+}
+
+/* Estilização da Página Recuperação de Senha */
+.recuperar_senha form label {
+  display: block;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Estilização do Input */
+.recuperar_senha form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  color: #333;
+}
+
+/* Alterar cor do background e borda ao focar (focus) */
+.recuperar_senha form input:focus {
+  background-color: #e7f3e7;
+  border-color: #ff5722;
+  outline: none;
+}
+
+/* Estilização do Botão */
+.recuperar_senha button {
+  background-color: #ff5722;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Efeito hover e active para o botão */
+.recuperar_senha button:hover {
+  background-color: #ffeb3b;
+  border: 1px solid #ff5722;
+  color: #ff5722;
+}
+
+.recuperar_senha button:active {
+  transform: scale(0.95);
+}
+
+/* Estilização Página de Login */
+.login {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+}
+
+.login .container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  color: #333;
+}
+
+/* Alterar cor do background e borda ao digitar (focus) */
+.login form input:focus {
+  background-color: #e7f3e7;
+  border-color: #ff5722;
+  outline: none;
+}
+
+/* Botão de cadastro com mesma estilização do botão da classe .inicio */
+.login button {
+  background-color: #ff5722;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Efeito ao passar o mouse (hover) no botão de cadastro */
+.login button:hover {
+  background-color: #ffeb3b;
+  border: 1px solid #ff5722;
+  color: #ff5722;
+}
+
+/* Efeito de clique (levemente apertado) */
+.login button:active {
+  transform: scale(0.95);
+}
+
+/* Estilização da Página Jogos */
+.games .container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*
+.games-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+*/
+
+.game-educ {
+  font-size: 4rem; /* Tamanho dos ícones */
+  color: #4caf50; /* Cor dos ícones (azul) */
+  margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+  transition: transform 0.3s ease, color 0.3s ease; /* Animação de transição ao passar o mouse */
+}
+
+.game-educ:hover {
+  color: #f44336;
+  box-shadow: 0 3px 8px #f44336;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  transform: scale(1.2);
+}
+
+.game-educ h3 a {
+  color: #4caf50;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.game-educ h3 a:hover {
+  color: #f44336;
+}
+
+/* #################################################################################### */
+/* Ícone de abrir menu aparece apenas em dispositivos móveis */
+@media (max-width: 768px) {
+  .btn-abrir-menu {
+    display: block; /* Mostra o ícone do menu */
+  }
+
+  .menu-desktop {
+    display: none; /* Esconde o menu desktop no mobile */
+  }
+
+  .menu-mobile {
+    display: block; /* Mostra o menu mobile quando ativado */
+  }
+}
+
